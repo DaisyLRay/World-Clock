@@ -28,15 +28,7 @@ let tokyoTime = moment().tz("Asia/Tokyo");
    "h:mm:ss [<small>]A[</small>]"
  );
 
-  let madridElement = document.querySelector("#madrid");
-
-  let madridDateElement = madridElement.querySelector(".date");
-  let madridTimeElement = madridElement.querySelector(".time");
-  let madridTime = moment().tz("Europe/Madrid");
-  madridDateElement.innerHTML = madridTime.format("MMMM Do YYYY");
-  madridTimeElement.innerHTML = madridTime.format(
-    "h:mm:ss [<small>]A[</small>]"
-  );
+ 
 
 }
 
@@ -53,7 +45,7 @@ function updateCity(event) {
 
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
-  console.log(cityTime.format("h"));
+  console.log(cityTime.format("h A"));
 if (
   cityTime.format("h") > "0" &&
   cityTime.format("h") < "7" &&
@@ -63,28 +55,19 @@ if (
 
   myElement.style.backgroundImage =
     "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/715/original/night_edit.png?1706491191)";
-} else if(
-    cityTime.format("h") >= "7" &&
+} else if (cityTime.format("h") > "7" &&
   cityTime.format("h") < "12" &&
-  cityTime.format("A") === "PM"
-) 
-{ let myElement = document.getElementById("container");
+  cityTime.format("A") === "PM") {
+  let myElement = document.getElementById("container");
 
   myElement.style.backgroundImage =
     "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/715/original/night_edit.png?1706491191)";
-}
-
-else if(  cityTime.format("h") === "12" &&
-  cityTime.format("A") === "AM"
-) {let myElement = document.getElementById("container");
+} else if (cityTime.format("h") === "12" && cityTime.format("A") === "AM") {
+  let myElement = document.getElementById("container");
 
   myElement.style.backgroundImage =
     "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/715/original/night_edit.png?1706491191)";
-}
-
-else {
-
-
+} else {
   let myElement = document.getElementById("container");
 
   myElement.style.backgroundImage =

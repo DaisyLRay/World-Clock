@@ -4,15 +4,20 @@ background: rgb(246, 244, 253);
 }
 
 .container {
-    background:  #ffffff;
+    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/815/original/GLOBE2.jpg?1706554662");
+    background-size: cover;
+   
     max-width: 600px;
+   
     margin: 0 auto;
     border-radius: 10px;
     padding: 30px;
+  
+    
 
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-    font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
     
 }
@@ -23,14 +28,16 @@ select {
     border-radius: 4px;
     padding: 10px;
     font-size: 18px;
+      font-family: 'Montserrat', sans-serif;
 }
 
 button {
        border-radius: 4px;
     padding: 10px;
     font-size: 18px;
-    font-family: sans-serif;
+
     background: #ffffff;
+      font-family: 'Montserrat', sans-serif;
 }
 .city-select {
     display: flex;
@@ -39,8 +46,11 @@ button {
 
 h1 {
     text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px grey opacity 0.6;
 
-    font-size: 38px;
+    font-size: 52px;
+    font-weight: 300;
 }
 
 .city {
@@ -48,7 +58,10 @@ h1 {
     justify-content: space-between;
     margin: 20px 0;
     border-bottom: 1px dashed rgba 0, 0, 0, 0.2;
-    padding: 20px 0;
+    padding: 10px 0;
+    font-weight: 400;
+    
+    color: #ffffff;
 
 }
 
@@ -57,12 +70,16 @@ h1 {
 }
 
 .date {
-    opacity: 0.5;
+
+    font-weight: 300;
+    font-size: 24px;
+
 }
 
 .time {
     font-size: 48px;
-    font-weight: bold;
+    font-weight: 500;
+
 
 }
 
