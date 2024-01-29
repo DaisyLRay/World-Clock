@@ -43,8 +43,55 @@ let tokyoTime = moment().tz("Asia/Tokyo");
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if(cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+   
+  }
+ 
+  
+
+
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
+  console.log(cityTime.format("h"));
+if (
+  cityTime.format("h") > "0" &&
+  cityTime.format("h") < "7" &&
+  cityTime.format("A") === "AM"
+) {
+  let myElement = document.getElementById("container");
+
+  myElement.style.backgroundImage =
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/715/original/night_edit.png?1706491191)";
+} else if(
+    cityTime.format("h") >= "7" &&
+  cityTime.format("h") < "12" &&
+  cityTime.format("A") === "PM"
+) 
+{ let myElement = document.getElementById("container");
+
+  myElement.style.backgroundImage =
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/715/original/night_edit.png?1706491191)";
+}
+
+else if(  cityTime.format("h") === "12" &&
+  cityTime.format("A") === "AM"
+) {let myElement = document.getElementById("container");
+
+  myElement.style.backgroundImage =
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/715/original/night_edit.png?1706491191)";
+}
+
+else {
+
+
+  let myElement = document.getElementById("container");
+
+  myElement.style.backgroundImage =
+    "url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/714/original/after_noon_edit.png?1706491177)";
+}
+
+
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = 
   `

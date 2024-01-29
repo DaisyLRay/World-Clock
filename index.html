@@ -10,22 +10,48 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" id="container">
     <h1>World Clock</h1>
+
+    <form action="">
+      <div class="city-select">
+      
 <select name="city" id="city">
+   
     <option value="">Select a city..</option>
-    <option value="Australia/Sydney">Sydney</option>
-    <option value="America/Costa_Rica">Costa Rica</option>
+    <option value="current">Current location</option>
+    <option value="Africa/Algiers">Algiers</option>
+    <option value="Pacific/Auckland">Auckland</option>
+   <option value="America/Chicago">Chicago</option> 
+   <option value="America/Costa_Rica">Costa Rica</option>
+   <option value="Asia/Jakarta">Jakarta</option>
+   <option value="Asia/Jerusalem">Jerusalem</option>
     <option value="Africa/Johannesburg">Johannesburg</option>
+    <option value="Asia/Kolkata">Kolkata</option>
+   <option value="Asia/Kuala_Lumpur">Kuala Lumpur</option>
+   <option value="Europe/Oslo">Oslo</option>
+   <option value="Asia/Singapore">Singapore</option>
+
+    <option value="Australia/Sydney">Sydney</option>
 </select>
+    <div class="reset">
+        <button>Reset</button>
+    </div>
+    </div> 
+   
+</select>
+
+
+
+</form>
 
 <div id="cities">
 <div class="city" id="london">
     <div>
     <h2>London</h2>
-    <div class="date"></div>
+    <div class="date">Au</div>
     </div>
- <div class="time"> <small></small> </div>
+ <div class="time"><small></small> </div>
 </div>
 
 <div class="city" id="tokyo">
@@ -64,3 +90,4 @@
     <script src="src/index.js"></script>
 </body>
 </html>
+

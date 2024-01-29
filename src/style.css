@@ -1,4 +1,5 @@
 body {
+    margin-top: 60px;
 background: rgb(246, 244, 253);
 }
 
@@ -17,17 +18,28 @@ background: rgb(246, 244, 253);
 }
 
 select {
-    display: block;
-    width: 100%;
+ 
+    width: 90%;
     border-radius: 4px;
     padding: 10px;
     font-size: 18px;
 }
 
+button {
+       border-radius: 4px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+.city-select {
+    display: flex;
+    justify-content: space-between;
+}
+
 h1 {
     text-align: center;
 
-    font-size: 36px;
+    font-size: 38px;
 }
 
 .city {
@@ -72,4 +84,3 @@ h2 {
     font-family: sans-serif;
  }
 
- 
