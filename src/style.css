@@ -30,6 +30,7 @@ button {
     padding: 10px;
     font-size: 18px;
     font-family: sans-serif;
+    background: #ffffff;
 }
 .city-select {
     display: flex;
